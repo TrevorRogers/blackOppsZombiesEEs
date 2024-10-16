@@ -4,17 +4,18 @@ import { router} from 'expo-router'
 
 const BloodStep0 = () => {
   return (
-   <SafeAreaView style={{color: 'black', backgroundColor: 'black', flex: 1}}>
+    <SafeAreaView style={{color: 'black', backgroundColor: 'black', flex: 1}}>
+    <ScrollView style={{backgroundColor: 'black'}}>
     <View style={{backgroundColor: 'black'}}>
       <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>Blood Of The Dead</Text>
+      <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>Starting rounds</Text>
     </View>
-    <ScrollView style={{backgroundColor: 'black'}}>
     <Text style={{color: 'orange', fontSize: 25, margin: 20}}>Prerequisites</Text>
-      <View style={{border: '1px solid orange', margin: 10}}>
+      
         <Text style={{color: 'white', margin: 20, fontSize: 30}}>
 During waves 1 to 17, you cannot complete the main Easter Egg, giving you plenty of time to work on obtaining the list of items below.
         </Text>
-        
+        <View style={{border: '1px solid orange', margin: 10}}>
         <FlatList
           data={[
             { key: '- Obtain the Spectral Sheid' },
@@ -29,18 +30,24 @@ During waves 1 to 17, you cannot complete the main Easter Egg, giving you plenty
           renderItem={({ item }) => {
             return (
               <View style={{ marginBottom: 20 }}>
-                <Text style={{ fontSize: 20, color: 'white', marginLeft: 10}}>{item.key}</Text>
+                <Text style={{ fontSize: 20, color: 'white', marginLeft: 10, marginTop: 10}}>{item.key}</Text>
               </View>
             );
           }}
         />
       </View>
     </ScrollView>
-    <View>
+    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
       <TouchableOpacity 
-     onPress={() => router.push("/BloodStep1")}
-      style={{alignSelf: 'flex-end', margin: 20}}>
-        <Text style={{color: 'white', fontSize: 25}}>Next</Text>
+      onPress={() => router.push('/BO4')}
+      style={{alignSelf: 'flex-end', margin: 15, backgroundColor: 'orange', borderRadius: 20}}>
+        <Text style={{color: 'black', fontSize: 25, margin: 8}}>Previous</Text>
+      </TouchableOpacity>
+      <Text style={{color: 'white', margin: 20, fontSize: 20}}>1-17</Text>
+      <TouchableOpacity 
+      onPress={() => router.push('/BloodStep1')}
+      style={{alignSelf: 'flex-end', margin: 15, backgroundColor: 'orange', borderRadius: 20}}>
+        <Text style={{color: 'black', fontSize: 25, margin: 8, marginLeft: 20, marginRight: 20}}>Next</Text>
       </TouchableOpacity>
     </View>
    </SafeAreaView>

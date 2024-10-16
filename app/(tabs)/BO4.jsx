@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 const BO4 = () => {
   return (
-    <SafeAreaView style={{color: 'black', backgroundColor: 'black'}}>
+
     <ScrollView style={{backgroundColor: 'black'}}>
     <View style={{disply: 'flex', justifyContent: 'center', alignItems: 'center'}}>
     <Text style={{color: 'white', fontSize: 50}}>
@@ -52,7 +52,7 @@ const BO4 = () => {
   </View>
   </View>
   </ScrollView>
-  </SafeAreaView>
+
   )
 }
 
