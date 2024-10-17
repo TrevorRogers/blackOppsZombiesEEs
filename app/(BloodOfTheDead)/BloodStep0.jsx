@@ -7,12 +7,12 @@ const BloodStep0 = () => {
     <SafeAreaView style={{color: 'black', backgroundColor: 'black', flex: 1}}>
     <ScrollView style={{backgroundColor: 'black'}}>
     <View style={{backgroundColor: 'black'}}>
-      <Text style={{color: 'white', fontSize: 40, textAlign: 'center'}}>Blood Of The Dead</Text>
+      <Text style={{color: 'white', fontSize: 40, textAlign: 'center', margin: 10}}>Blood Of The Dead</Text>
       <Text style={{color: 'white', fontSize: 30, textAlign: 'center'}}>Starting rounds</Text>
     </View>
     <Text style={{color: 'orange', fontSize: 25, margin: 20}}>Prerequisites</Text>
       
-        <Text style={{color: 'white', margin: 20, fontSize: 30}}>
+        <Text style={{color: 'lightgrey', margin: 20, fontSize: 30, fontWeight: 150}}>
 During waves 1 to 17, you cannot complete the main Easter Egg, giving you plenty of time to work on obtaining the list of items below.
         </Text>
         <View style={{border: '1px solid orange', margin: 10}}>
@@ -30,7 +30,7 @@ During waves 1 to 17, you cannot complete the main Easter Egg, giving you plenty
           renderItem={({ item }) => {
             return (
               <View style={{ marginBottom: 20 }}>
-                <Text style={{ fontSize: 20, color: 'white', marginLeft: 10, marginTop: 10}}>{item.key}</Text>
+                <Text style={{ fontSize: 20, color: 'lightgrey', marginLeft: 10, marginTop: 10}}>{item.key}</Text>
               </View>
             );
           }}

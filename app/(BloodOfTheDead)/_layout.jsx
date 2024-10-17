@@ -16,6 +16,18 @@ const bloodLayout = () => {
         headerShown: false,
       }}
     />
+     <Stack.Screen
+      name="BloodStep2"
+      options={{
+        headerShown: false,
+      }}
+    />
+        <Stack.Screen
+      name="BloodStep3"
+      options={{
+        headerShown: false,
+      }}
+    />
   </Stack>
   )
 }
