@@ -1,21 +1,16 @@
 import React from 'react'
-import { View, ScrollView, Text, TouchableOpacity } from 'react-native'
+import { View, ScrollView, Text, TouchableOpacity, ImageBackground } from 'react-native'
 import {Link, router} from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import tabsBackground from '../../assets/images/tabsBackground.png'
 
 const BO4 = () => {
   return (
 
-    <ScrollView style={{backgroundColor: '#121212'}}>
-      <View style={{disply: 'flex', justifyContent: 'center', alignItems: 'center', border: 'solid 1px orange', margin: 20}}>
-      <Text style={{color: 'white', fontSize: 50}}>
-          Black Ops 4
-        </Text>
-        <Text style={{color: 'white', fontSize: 50}}>
-          Zombies
-        </Text>
-      </View>
-        <Text style={{color: 'white', fontSize: 25, color: 'orange', textAlign: 'center', marginTop: 20}}>
+    <ImageBackground source={tabsBackground} style={{width: '100%', height: '100%', tintColor: 'cyan'}} blurRadius={4}>
+    <ScrollView style={{backgroundColor: 'rgba(0,0,0, 0.5)', flex: 1 }}>
+  
+        <Text style={{color: 'white', fontSize: 27, color: 'orange', textAlign: 'center', marginTop: 20}}>
           Choose your map
         </Text>
     <View style={{ margin: 20}}>
@@ -55,7 +50,7 @@ const BO4 = () => {
   </View>
   </View>
   </ScrollView>
-
+  </ImageBackground>
   )
 }
 
